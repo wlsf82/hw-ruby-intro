@@ -5,15 +5,13 @@
 def sum arr
   sum = 0
 
-  if arr.empty?
-    sum
-  else
-    arr.each do |num|
-      sum += num
-    end
+  sum unless arr.empty?
 
-    sum
+  arr.each do |num|
+    sum += num
   end
+
+  sum
 end
 
 def max_2_sum arr
@@ -30,25 +28,21 @@ end
 def sum_to_n? arr, n
   result = false
 
-  if arr.empty? || arr.length == 1
-    result
-  elsif arr.length == 2
-    arr[0] + arr[1] == n
-  else
-    i = 0
+  result unless arr.empty? || arr.length == 1
 
-    while i < arr.length - 1
-      result = arr[i] + arr[i + 1] == n
+  i = 0
 
-      if result
-        break
-      else
-        i+= 1
-      end
+  while i < arr.length - 1
+    result = arr[i] + arr[i + 1] == n
+
+    if result
+      break
+    else
+      i+= 1
     end
-
-    result
   end
+
+  result
 end
 
 # Part 2
