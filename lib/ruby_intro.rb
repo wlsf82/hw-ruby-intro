@@ -3,15 +3,52 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  sum = 0
+
+  if arr.empty?
+    sum
+  else
+    arr.each do |num|
+      sum += num
+    end
+
+    sum
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    0
+  elsif
+    arr.length == 1
+    arr[0]
+  else
+    largest = arr.max + arr.sort[-2]
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  result = false
+
+  if arr.empty? || arr.length == 1
+    result
+  elsif arr.length == 2
+    arr[0] + arr[1] == n
+  else
+    i = 0
+
+    while i < arr.length - 1
+      result = arr[i] + arr[i + 1] == n
+
+      if result
+        break
+      else
+        i+= 1
+      end
+    end
+
+    result
+  end
 end
 
 # Part 2
