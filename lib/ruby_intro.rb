@@ -5,8 +5,6 @@
 def sum arr
   sum = 0
 
-  sum unless arr.empty?
-
   arr.each do |num|
     sum += num
   end
@@ -28,10 +26,7 @@ end
 def sum_to_n? arr, n
   result = false
 
-  result unless arr.empty? || arr.length == 1
-
   i = 0
-
   while i < arr.length - 1
     result = arr[i] + arr[i + 1] == n
 
