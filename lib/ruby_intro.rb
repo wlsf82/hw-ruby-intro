@@ -7,9 +7,7 @@ def sum arr
 
   arr.each do |num|
     sum += num
-  end
-
-  sum
+  end.sum
 end
 
 def max_2_sum arr
