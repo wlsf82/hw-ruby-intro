@@ -21,7 +21,7 @@ def max_2_sum arr
     arr.length == 1
     arr[0]
   else
-    largest = arr.max + arr.sort[-2]
+    arr.max + arr.sort[-2]
   end
 end
 
